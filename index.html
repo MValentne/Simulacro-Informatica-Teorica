@@ -76,6 +76,35 @@
             background: linear-gradient(120deg, #4338ca 0%, #6366f1 100%);
             outline: none;
         }
+        .cost-marker {
+            margin-top: 12px;
+            padding: 7px 16px;
+            background: #fde68a;
+            color: #b45309;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.98em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.18s;
+        }
+        .cost-marker.selected {
+            background: #fbbf24;
+            color: #fff;
+        }
+        .cost-label {
+            display: inline-block;
+            margin-left: 7px;
+            color: #b45309;
+            font-size: 1em;
+            font-weight: 600;
+        }
+        .cost-result {
+            color: #b45309;
+            font-size: 1em;
+            font-weight: bold;
+            margin-left: 4px;
+        }
         .correct {
             color: #16a34a;
             font-weight: 600;
@@ -132,10 +161,10 @@
             {"question":"¿Qué se usa para identificar una celda de memoria?","options":["Nombre","Dirección","Etiqueta","Archivo"],"answer":"Dirección"},
             {"question":"¿Qué representa la sigla GUI?","options":["Interfaz Gráfica de Usuario","Impresión de Gráficos","Red Global Unificada","Unidad de Control General"],"answer":"Interfaz Gráfica de Usuario"},
             {"question":"¿Qué es una instrucción de salto?","options":["Crea una imagen","Cambia el flujo del programa","Mueve archivos","Suma dos números"],"answer":"Cambia el flujo del programa"},
-            {"question":"¿Qué es la computación ubicua?","options":["Acceso remoto a servidores","Programación en la nube","Uso exclusivo de inteligencia artificial","Computadoras presentes en todos los objetos"],"answer":"Computadoras presentes en todos los objetos"},
+            {"question":"¿Qué es la computación ubicua?","options":["Acceso remoto a servidores","Programación en la nube","Uso exclusivo de inteligencia artificial","Computadoras presentes en todas partes"],"answer":"Computadoras presentes en todas partes"},
             {"question":"¿Qué función cumple un compilador?","options":["Crea bases de datos","Traduce código fuente a código máquina","Envia correos electrónicos","Ejecuta archivos de música"],"answer":"Traduce código fuente a código máquina"},
             {"question":"¿Cuál es la base del sistema binario?","options":["16","2","8","10"],"answer":"2"},
-            {"question":"¿Qué significa el concepto de programa almacenado?","options":["El usuario escribe en papel","Las instrucciones están en memoria","El software se guarda en CD","El programa se imprime"],"answer":"Las instrucciones están en memoria"},
+            {"question":"¿Qué significa el concepto de programa almacenado?","options":["El usuario escribe en papel","Las instrucciones están en memoria","El software se guarda en CD","El programa es físico"],"answer":"Las instrucciones están en memoria"},
             {"question":"¿Cuál de estos dispositivos es considerado de almacenamiento secundario?","options":["RAM","ALU","Disco rígido","Registro"],"answer":"Disco rígido"},
             {"question":"¿Cuál de estos es un ejemplo de software enlatado?","options":["Planilla personalizada","Sistema a medida para hospitales","Código fuente abierto","Microsoft Word"],"answer":"Microsoft Word"},
             {"question":"¿Qué unidad permite almacenar datos de manera no volátil?","options":["Registro","Disco duro","Cache","RAM"],"answer":"Disco duro"},
@@ -148,7 +177,7 @@
             {"question":"¿Qué invento permitió construir computadoras más pequeñas en la tercera generación?","options":["Discos magnéticos","Tarjetas perforadas","Tubos de vacío","Circuitos integrados"],"answer":"Circuitos integrados"},
             {"question":"¿Qué componente ejecuta operaciones de lógica y comparación?","options":["RAM","ROM","ALU","GPU"],"answer":"ALU"},
             {"question":"¿Cuál fue una de las primeras computadoras en usar binario y punto flotante?","options":["Mark I","ENIAC","Z1","ABC"],"answer":"Z1"},
-            {"question":"¿Cuál es el objetivo de la compresión de datos?","options":["Eliminar información útil","Reducir el tamaño para almacenamiento o transmisión","Aumentar la calidad del sonido","Mejorar la resolución de video"],"answer":"Reducir el tamaño para almacenamiento o transmisión"},
+            {"question":"¿Cuál es el objetivo de la compresión de datos?","options":["Eliminar información útil","Reducir el tamaño para almacenamiento o transmisión","Aumentar la calidad de imagen","Evitar la duplicidad"],"answer":"Reducir el tamaño para almacenamiento o transmisión"},
             {"question":"¿Qué es un bit?","options":["Una celda de memoria","Un procesador","Un tipo de programa","La unidad mínima de información digital"],"answer":"La unidad mínima de información digital"},
             {"question":"¿Qué tipo de codificación utiliza menos bits para caracteres frecuentes?","options":["RLE","Huffman","Unicode","ASCII"],"answer":"Huffman"},
             {"question":"¿Qué significan las siglas ALU?","options":["Lógica Universal","Unidad Aritmético-Lógica","Unidad de Entrada","Registro de Usuario"],"answer":"Unidad Aritmético-Lógica"},
@@ -161,11 +190,11 @@
             {"question":"¿Qué técnica de compresión se basa en guardar repeticiones consecutivas?","options":["Unicode","Huffman","RLE","ZIP"],"answer":"RLE"},
             {"question":"¿Qué computadora ayudó a planear el Día D en la Segunda Guerra Mundial?","options":["COLOSSUS","ABC","ENIAC","Z3"],"answer":"COLOSSUS"},
             {"question":"¿Qué es una dirección de memoria?","options":["Número binario del procesador","Clave de sistema","Nombre del archivo","Identificador único de una celda"],"answer":"Identificador único de una celda"},
-            {"question":"¿Qué hace el registro de instrucción (IR)?","options":["Almacena la instrucción que se está ejecutando","Almacena imágenes","Guarda archivos temporales","Controla la impresora"],"answer":"Almacena la instrucción que se está ejecutando"},
+            {"question":"¿Qué hace el registro de instrucción (IR)?","options":["Almacena la instrucción que se está ejecutando","Almacena imágenes","Guarda archivos temporales","Controla la memoria RAM"],"answer":"Almacena la instrucción que se está ejecutando"},
             {"question":"¿Qué lenguaje de programación fue creado primero?","options":["Java","Python","C++","Assembler"],"answer":"Assembler"},
             {"question":"¿Qué parte del procesador almacena temporalmente los resultados de operaciones?","options":["Unidad de control","Disco","Cache","Registro"],"answer":"Registro"},
             {"question":"¿Qué representa una señal digital?","options":["Ruido eléctrico","Voltaje variable","Valores continuos","Valores discretos"],"answer":"Valores discretos"},
-            {"question":"¿Qué es el reloj de la CPU?","options":["Un programa de calendario","Un generador de pulsos que sincroniza las operaciones","Un componente de video","Un temporizador para apagar la PC"],"answer":"Un generador de pulsos que sincroniza las operaciones"},
+            {"question":"¿Qué es el reloj de la CPU?","options":["Un programa de calendario","Un generador de pulsos que sincroniza las operaciones","Un componente de video","Un temporizador para la RAM"],"answer":"Un generador de pulsos que sincroniza las operaciones"},
             {"question":"¿Cuál fue el aporte de Ada Lovelace?","options":["Creó el lenguaje C","Inventora de la ENIAC","Primera programadora","Diseñadora del Z3"],"answer":"Primera programadora"},
             {"question":"¿Qué tipo de compresión elimina información que no puede percibir el usuario?","options":["Con pérdida","Sin pérdida","Numérica","Binaria"],"answer":"Con pérdida"},
             {"question":"¿Qué tipo de software es un antivirus?","options":["Utilidad","Sistema operativo","Productividad","Red social"],"answer":"Utilidad"},
@@ -185,28 +214,27 @@
             {"question":"¿Cuál de las siguientes es una computadora incrustada?","options":["Servidor","Arduino","Notebook","Mainframe"],"answer":"Arduino"},
             {"question":"¿Qué representa un archivo MP3?","options":["Video codificado","Audio comprimido con pérdida","Texto comprimido","Imagen escaneada"],"answer":"Audio comprimido con pérdida"}
         ];
-
         const autoevaluativo = [
             {"question":"¿Qué es el software?","options":["Conjunto de programas que controlan el hardware","Dispositivo físico del sistema","Parte tangible de la computadora","Lenguaje de máquina"],"answer":"Conjunto de programas que controlan el hardware"},
             {"question":"¿Qué tipo de software permite gestionar los recursos del sistema?","options":["Software de base","Software de aplicación","Software gráfico","Software compilado"],"answer":"Software de base"},
             {"question":"¿Cuál de los siguientes es un software de base?","options":["Sistema operativo","Hoja de cálculo","Procesador de textos","Editor de imágenes"],"answer":"Sistema operativo"},
             {"question":"¿Cuál de estos es un ejemplo de software de aplicación?","options":["PowerPoint","BIOS","Sistema operativo","Driver de impresora"],"answer":"PowerPoint"},
             {"question":"¿Qué función cumple un sistema operativo?","options":["Gestionar y coordinar el hardware","Convertir código en binario","Realizar copias de seguridad","Diseñar gráficos"],"answer":"Gestionar y coordinar el hardware"},
-            {"question":"¿Qué es un software utilitario?","options":["Programa que realiza tareas específicas de mantenimiento","Editor de texto","Lenguaje de programación","Controlador de dispositivo"],"answer":"Programa que realiza tareas específicas de mantenimiento"},
+            {"question":"¿Qué es un software utilitario?","options":["Programa que realiza tareas específicas de mantenimiento","Editor de texto","Lenguaje de programación","Controlador de disco"],"answer":"Programa que realiza tareas específicas de mantenimiento"},
             {"question":"¿Cuál de estos programas es un software utilitario?","options":["Antivirus","Photoshop","Windows","Excel"],"answer":"Antivirus"},
-            {"question":"¿Qué hacen los compiladores?","options":["Traducen todo el programa fuente a código objeto","Ejecutan instrucciones una a una","Almacenan datos en RAM","Dibujan interfaces gráficas"],"answer":"Traducen todo el programa fuente a código objeto"},
+            {"question":"¿Qué hacen los compiladores?","options":["Traducen todo el programa fuente a código objeto","Ejecutan instrucciones una a una","Almacenan datos en RAM","Dibujan interfaces"],"answer":"Traducen todo el programa fuente a código objeto"},
             {"question":"¿Qué hacen los intérpretes?","options":["Traducen y ejecutan línea por línea el código fuente","Compilan el programa completo","Diseñan interfaces","Cargan controladores"],"answer":"Traducen y ejecutan línea por línea el código fuente"},
             {"question":"¿Qué software convierte instrucciones de alto nivel a lenguaje máquina?","options":["Traductores","Utilitarios","Aplicaciones","Compresores"],"answer":"Traductores"},
             {"question":"¿Qué generación de sistemas operativos introdujo la multiprogramación?","options":["Tercera","Primera","Segunda","Cuarta"],"answer":"Tercera"},
-            {"question":"¿Cuál fue la característica principal de los sistemas operativos de segunda generación?","options":["Uso de procesamiento por lotes","Interfaz gráfica","Multiprogramación","Sistemas distribuidos"],"answer":"Uso de procesamiento por lotes"},
+            {"question":"¿Cuál fue la característica principal de los sistemas operativos de segunda generación?","options":["Uso de procesamiento por lotes","Interfaz gráfica","Multiprogramación","Redes de computadoras"],"answer":"Uso de procesamiento por lotes"},
             {"question":"¿Qué generación introdujo sistemas operativos distribuidos?","options":["Quinta","Primera","Tercera","Segunda"],"answer":"Quinta"},
             {"question":"¿Qué tipo de software se adapta a las necesidades específicas de un usuario?","options":["Software a medida","Software enlatado","Software libre","Software beta"],"answer":"Software a medida"},
             {"question":"¿Cuál es una ventaja del software enlatado?","options":["Costo reducido y disponibilidad inmediata","Exclusividad total","Diseñado por el usuario","No requiere instalación"],"answer":"Costo reducido y disponibilidad inmediata"},
-            {"question":"¿Qué caracteriza a los paquetes integrados?","options":["Incluyen varios programas de aplicación con funciones relacionadas","Son sistemas operativos","Son programas individuales","Se usan solo en Linux"],"answer":"Incluyen varios programas de aplicación con funciones relacionadas"},
-            {"question":"¿Qué es el software malicioso?","options":["Programas diseñados para dañar o infiltrarse en un sistema","Programas de mantenimiento","Aplicaciones educativas","Juegos instalados en el sistema"],"answer":"Programas diseñados para dañar o infiltrarse en un sistema"},
+            {"question":"¿Qué caracteriza a los paquetes integrados?","options":["Incluyen varios programas de aplicación con funciones relacionadas","Son sistemas operativos","Son programas individuales","Son utilitarios"],"answer":"Incluyen varios programas de aplicación con funciones relacionadas"},
+            {"question":"¿Qué es el software malicioso?","options":["Programas diseñados para dañar o infiltrarse en un sistema","Programas de mantenimiento","Aplicaciones educativas","Juegos de computadora"],"answer":"Programas diseñados para dañar o infiltrarse en un sistema"},
             {"question":"¿Cuál es un ejemplo de software malicioso?","options":["Virus","Compilador","Navegador web","Word"],"answer":"Virus"},
             {"question":"¿Qué función cumple un antivirus?","options":["Detectar y eliminar software malicioso","Crear documentos","Controlar el mouse","Instalar hardware"],"answer":"Detectar y eliminar software malicioso"},
-            {"question":"¿Cuál de las siguientes NO es una función del sistema operativo?","options":["Imprimir directamente sin drivers","Administrar recursos","Controlar el acceso al hardware","Ejecutar programas"],"answer":"Imprimir directamente sin drivers"},
+            {"question":"¿Cuál de las siguientes NO es una función del sistema operativo?","options":["Imprimir directamente sin drivers","Administrar recursos","Controlar el acceso al hardware","Gestionar archivos"],"answer":"Imprimir directamente sin drivers"},
             {"question":"¿Qué es un archivo en informática?","options":["Conjunto de datos almacenados en un medio","Una dirección IP","Un dispositivo de entrada","Una aplicación de red"],"answer":"Conjunto de datos almacenados en un medio"},
             {"question":"¿Qué es un registro lógico?","options":["Unidad de información dentro de un archivo","Área física del disco","Programa compilado","Tipo de base de datos"],"answer":"Unidad de información dentro de un archivo"},
             {"question":"¿Qué es un registro físico?","options":["Bloque real en el medio de almacenamiento","Variable temporal","Interfaz gráfica","Controlador de red"],"answer":"Bloque real en el medio de almacenamiento"},
@@ -216,38 +244,38 @@
             {"question":"¿Qué organización de archivos utiliza una tabla auxiliar de claves?","options":["Indexado","Hashing","Secuencial","Virtual"],"answer":"Indexado"},
             {"question":"¿Qué técnica permite obtener una dirección a partir de una clave mediante una función?","options":["Hashing","Indexado","Secuencial","Manual"],"answer":"Hashing"},
             {"question":"¿Qué tipo de acceso requiere recorrer datos en orden?","options":["Secuencial","Directo","Aleatorio","Distribuido"],"answer":"Secuencial"},
-            {"question":"¿Cuál de los siguientes es un inconveniente del almacenamiento secuencial?","options":["Acceso lento a datos intermedios","Alta velocidad de acceso","Acceso inmediato","Acceso directo garantizado"],"answer":"Acceso lento a datos intermedios"},
+            {"question":"¿Cuál de los siguientes es un inconveniente del almacenamiento secuencial?","options":["Acceso lento a datos intermedios","Alta velocidad de acceso","Acceso inmediato","Fácil actualización"],"answer":"Acceso lento a datos intermedios"},
             {"question":"¿Qué es una base de datos?","options":["Conjunto de datos organizados","Una interfaz gráfica","Un sistema de seguridad","Una impresora virtual"],"answer":"Conjunto de datos organizados"},
             {"question":"¿Cuál es un modelo de base de datos ampliamente usado?","options":["Relacional","Secuencial","Gráfico","Distribuido"],"answer":"Relacional"},
             {"question":"¿Qué define el modelo orientado a objetos?","options":["Uso de clases y objetos para representar datos","Almacenamiento físico","Controladores de red","Software enlatado"],"answer":"Uso de clases y objetos para representar datos"},
-            {"question":"¿Qué permite la independencia lógica en bases de datos?","options":["Modificar el diseño sin afectar aplicaciones","Cambiar el sistema operativo","Aumentar la RAM","Eliminar archivos"],"answer":"Modificar el diseño sin afectar aplicaciones"},
+            {"question":"¿Qué permite la independencia lógica en bases de datos?","options":["Modificar el diseño sin afectar aplicaciones","Cambiar el sistema operativo","Aumentar la RAM","Eliminar restricciones"],"answer":"Modificar el diseño sin afectar aplicaciones"},
             {"question":"¿Qué es una transacción en bases de datos?","options":["Conjunto de operaciones atómicas","Archivo comprimido","Proceso de impresión","Lectura secuencial"],"answer":"Conjunto de operaciones atómicas"},
-            {"question":"¿Qué garantiza el control de concurrencia?","options":["Consistencia en el acceso simultáneo a datos","Mayor tamaño de archivo","Compresión de datos","Almacenamiento externo"],"answer":"Consistencia en el acceso simultáneo a datos"},
+            {"question":"¿Qué garantiza el control de concurrencia?","options":["Consistencia en el acceso simultáneo a datos","Mayor tamaño de archivo","Compresión de datos","Almacenamiento temporal"],"answer":"Consistencia en el acceso simultáneo a datos"},
             {"question":"¿Qué es el SGBD?","options":["Sistema que permite crear y manejar bases de datos","Antivirus de red","Compilador de programas","Red social virtual"],"answer":"Sistema que permite crear y manejar bases de datos"},
-            {"question":"¿Qué es una vista en una base de datos?","options":["Representación parcial y personalizada de los datos","Copia física de los datos","Eliminación de registros","Formato gráfico animado"],"answer":"Representación parcial y personalizada de los datos"},
-            {"question":"¿Qué función tiene el diseño físico de una base de datos?","options":["Definir estructuras de almacenamiento","Establecer relaciones lógicas","Determinar reglas legales","Traducir a otros idiomas"],"answer":"Definir estructuras de almacenamiento"},
-            {"question":"¿Cuál es una preocupación social del uso de bases de datos?","options":["Privacidad de la información","Velocidad de impresión","Conectividad USB","Cantidad de núcleos del procesador"],"answer":"Privacidad de la información"},
+            {"question":"¿Qué es una vista en una base de datos?","options":["Representación parcial y personalizada de los datos","Copia física de los datos","Eliminación de registros","Formato de almacenamiento"],"answer":"Representación parcial y personalizada de los datos"},
+            {"question":"¿Qué función tiene el diseño físico de una base de datos?","options":["Definir estructuras de almacenamiento","Establecer relaciones lógicas","Determinar reglas legales","Actualizar registros"],"answer":"Definir estructuras de almacenamiento"},
+            {"question":"¿Cuál es una preocupación social del uso de bases de datos?","options":["Privacidad de la información","Velocidad de impresión","Conectividad USB","Cantidad de núcleos"],"answer":"Privacidad de la información"},
             {"question":"¿Qué es un dispositivo de entrada?","options":["Permite ingresar datos a la computadora","Imprime datos","Muestra imágenes","Almacena archivos"],"answer":"Permite ingresar datos a la computadora"},
             {"question":"¿Cuál de los siguientes es un dispositivo de entrada?","options":["Teclado","Monitor","Impresora","Proyector"],"answer":"Teclado"},
             {"question":"¿Qué tipo de dispositivo es el mouse?","options":["Entrada","Salida","Almacenamiento","Procesamiento"],"answer":"Entrada"},
             {"question":"¿Cuál es un ejemplo de dispositivo de salida?","options":["Impresora","Scanner","Teclado","Mouse"],"answer":"Impresora"},
             {"question":"¿Qué tipo de pantalla usa tubos de rayos catódicos?","options":["CRT","LCD","LED","OLED"],"answer":"CRT"},
-            {"question":"¿Qué característica tiene la pantalla LCD?","options":["Usa cristales líquidos para formar imágenes","Proyecta luz con tubos de rayos","Se basa en plasma","Refleja luz solar"],"answer":"Usa cristales líquidos para formar imágenes"},
+            {"question":"¿Qué característica tiene la pantalla LCD?","options":["Usa cristales líquidos para formar imágenes","Proyecta luz con tubos de rayos","Se basa en plasma","Refleja luz ambiental"],"answer":"Usa cristales líquidos para formar imágenes"},
             {"question":"¿Qué tipo de pantalla ofrece mayor contraste y menor consumo energético?","options":["OLED","CRT","Plasma","LCD"],"answer":"OLED"},
             {"question":"¿Qué es una tableta gráfica?","options":["Dispositivo de entrada usado para dibujo digital","Pantalla táctil","Impresora 3D","Reproductor de medios"],"answer":"Dispositivo de entrada usado para dibujo digital"},
             {"question":"¿Cuál es la función del escáner?","options":["Digitalizar documentos o imágenes","Imprimir textos","Reproducir sonidos","Navegar por internet"],"answer":"Digitalizar documentos o imágenes"},
             {"question":"¿Qué tipo de impresora utiliza cartuchos de tinta?","options":["Inyección de tinta","Láser","Matricial","Térmica"],"answer":"Inyección de tinta"},
             {"question":"¿Qué tipo de impresora funciona con tóner?","options":["Láser","Inyección de tinta","Térmica","Matricial"],"answer":"Láser"},
             {"question":"¿Qué tipo de almacenamiento es el disco duro?","options":["Magnético","Óptico","Volátil","Temporal"],"answer":"Magnético"},
-            {"question":"¿Cuál es una característica del disco óptico?","options":["Utiliza láser para leer o grabar datos","Emite señales de radio","Se basa en campos magnéticos","Solo sirve para audio"],"answer":"Utiliza láser para leer o grabar datos"},
+            {"question":"¿Cuál es una característica del disco óptico?","options":["Utiliza láser para leer o grabar datos","Emite señales de radio","Se basa en campos magnéticos","Solo sirve en computadoras"],"answer":"Utiliza láser para leer o grabar datos"},
             {"question":"¿Qué almacenamiento tiene mayor velocidad de acceso?","options":["SSD","DVD","Disco duro","Cinta magnética"],"answer":"SSD"},
             {"question":"¿Qué es un SSD?","options":["Unidad de estado sólido sin partes móviles","Disco óptico con láser","Memoria RAM externa","Impresora térmica"],"answer":"Unidad de estado sólido sin partes móviles"},
             {"question":"¿Cuál de los siguientes es un medio de almacenamiento óptico?","options":["CD","Disco duro","SSD","USB"],"answer":"CD"},
             {"question":"¿Qué almacenamiento es más adecuado para grandes volúmenes a bajo costo?","options":["Cinta magnética","SSD","Disquete","RAM"],"answer":"Cinta magnética"},
-            {"question":"¿Qué diferencia hay entre RAM y almacenamiento secundario?","options":["La RAM es volátil y más rápida","La RAM almacena permanentemente","El secundario es más caro","La RAM guarda programas para siempre"],"answer":"La RAM es volátil y más rápida"},
+            {"question":"¿Qué diferencia hay entre RAM y almacenamiento secundario?","options":["La RAM es volátil y más rápida","La RAM almacena permanentemente","El secundario es más caro","No hay diferencia"],"answer":"La RAM es volátil y más rápida"},
             {"question":"¿Qué se mide en DPI en los escáneres?","options":["Resolución","Velocidad de impresión","Tamaño del papel","Capacidad de almacenamiento"],"answer":"Resolución"},
             {"question":"¿Qué componente convierte imágenes en señales digitales?","options":["Escáner","Impresora","Pantalla","Teclado"],"answer":"Escáner"},
-            {"question":"¿Qué es la ingeniería del software?","options":["Disciplina que aplica principios de ingeniería al desarrollo de software","Lenguaje de programación","Diseño de hardware","Sistema de redes"],"answer":"Disciplina que aplica principios de ingeniería al desarrollo de software"},
+            {"question":"¿Qué es la ingeniería del software?","options":["Disciplina que aplica principios de ingeniería al desarrollo de software","Lenguaje de programación","Diseño de hardware","Uso de redes"],"answer":"Disciplina que aplica principios de ingeniería al desarrollo de software"},
             {"question":"¿Qué etapa del ciclo de vida del software se enfoca en entender lo que el cliente necesita?","options":["Análisis de requerimientos","Implementación","Pruebas","Mantenimiento"],"answer":"Análisis de requerimientos"},
             {"question":"¿Qué etapa incluye la escritura del código fuente?","options":["Implementación","Diseño","Pruebas","Requisitos"],"answer":"Implementación"},
             {"question":"¿Qué etapa se encarga de validar que el sistema funcione correctamente?","options":["Pruebas","Diseño","Análisis","Despliegue"],"answer":"Pruebas"},
@@ -255,20 +283,20 @@
             {"question":"¿Qué significa IDE?","options":["Entorno de Desarrollo Integrado","Editor de Diseño Eléctrico","Interfaz de Datos Estandarizada","Sistema de Desarrollo en Línea"],"answer":"Entorno de Desarrollo Integrado"},
             {"question":"¿Cuál es el lenguaje más cercano al hardware?","options":["Lenguaje máquina","Lenguaje ensamblador","Lenguaje de alto nivel","Lenguaje natural"],"answer":"Lenguaje máquina"},
             {"question":"¿Cuál es un lenguaje simbólico que traduce directamente a lenguaje máquina?","options":["Lenguaje ensamblador","C++","Python","JavaScript"],"answer":"Lenguaje ensamblador"},
-            {"question":"¿Cuál es una característica de los lenguajes de alto nivel?","options":["Se asemejan al lenguaje humano y son portables","Solo usan ceros y unos","No requieren compiladores","Son ilegibles para el usuario"],"answer":"Se asemejan al lenguaje humano y son portables"},
-            {"question":"¿Qué caracteriza a los lenguajes de cuarta generación?","options":["Mayor productividad y facilidad de uso","Lenguaje binario","Uso exclusivo en hardware","Complejidad sintáctica"],"answer":"Mayor productividad y facilidad de uso"},
+            {"question":"¿Cuál es una característica de los lenguajes de alto nivel?","options":["Se asemejan al lenguaje humano y son portables","Solo usan ceros y unos","No requieren compilador","Son exclusivos de hardware"],"answer":"Se asemejan al lenguaje humano y son portables"},
+            {"question":"¿Qué caracteriza a los lenguajes de cuarta generación?","options":["Mayor productividad y facilidad de uso","Lenguaje binario","Uso exclusivo en hardware","Complejidad extrema"],"answer":"Mayor productividad y facilidad de uso"},
             {"question":"¿Qué son los dominios de aplicación del software?","options":["Áreas en las que el software puede ser aplicado","Tipos de errores","Lenguajes de programación","Interfaces gráficas"],"answer":"Áreas en las que el software puede ser aplicado"},
             {"question":"¿Qué principio busca dividir un programa en partes más pequeñas y manejables?","options":["Modularidad","Redundancia","Codificación","Recursividad"],"answer":"Modularidad"},
             {"question":"¿Cuál es el objetivo del mantenimiento del software?","options":["Corregir errores y adaptarlo a cambios","Eliminar el sistema","Evitar pruebas","Reducir el código fuente"],"answer":"Corregir errores y adaptarlo a cambios"},
-            {"question":"¿Qué es un Centro de Procesamiento de Datos (CPD)?","options":["Lugar físico donde se gestionan recursos informáticos","Base de datos distribuida","Antivirus de red","Compilador de sistemas"],"answer":"Lugar físico donde se gestionan recursos informáticos"},
+            {"question":"¿Qué es un Centro de Procesamiento de Datos (CPD)?","options":["Lugar físico donde se gestionan recursos informáticos","Base de datos distribuida","Antivirus de red","Sistema operativo"],"answer":"Lugar físico donde se gestionan recursos informáticos"},
             {"question":"¿Qué tipo de personal trabaja en un CPD?","options":["Administradores de sistemas, técnicos, analistas","Diseñadores gráficos","Promotores comerciales","Vendedores de software"],"answer":"Administradores de sistemas, técnicos, analistas"},
             {"question":"¿Cuál es una función del CPD?","options":["Almacenar, procesar y proteger información","Dibujar en pantallas","Diseñar circuitos","Elaborar encuestas manuales"],"answer":"Almacenar, procesar y proteger información"},
-            {"question":"¿Qué criterio es importante al ubicar un CPD?","options":["Seguridad y conectividad","Cercanía a zonas turísticas","Diseño gráfico atractivo","Presencia de tiendas comerciales"],"answer":"Seguridad y conectividad"},
+            {"question":"¿Qué criterio es importante al ubicar un CPD?","options":["Seguridad y conectividad","Cercanía a zonas turísticas","Diseño gráfico atractivo","Presencia de tiendas"],"answer":"Seguridad y conectividad"},
             {"question":"¿Qué herramienta incluye editor, compilador y depurador en un solo entorno?","options":["IDE","CASE","ERP","BIOS"],"answer":"IDE"},
             {"question":"¿Qué fase del ciclo de vida se relaciona con la creación de la estructura lógica del sistema?","options":["Diseño","Implementación","Prueba","Mantenimiento"],"answer":"Diseño"},
-            {"question":"¿Cuál de estas herramientas permite representar gráficamente procesos del software?","options":["Herramientas CASE","Procesadores de texto","Navegadores web","Sistemas operativos"],"answer":"Herramientas CASE"},
+            {"question":"¿Cuál de estas herramientas permite representar gráficamente procesos del software?","options":["Herramientas CASE","Procesadores de texto","Navegadores web","Sistemas expertos"],"answer":"Herramientas CASE"},
             {"question":"¿Qué es una red de computadoras?","options":["Conjunto de computadoras conectadas para compartir recursos","Sistema operativo","Base de datos","Lenguaje de programación"],"answer":"Conjunto de computadoras conectadas para compartir recursos"},
-            {"question":"¿Cuál de las siguientes es una ventaja de las redes?","options":["Compartir archivos e impresoras","Aumentar el tamaño físico del disco duro","Reducir la velocidad de procesamiento","Evitar el uso de software"],"answer":"Compartir archivos e impresoras"},
+            {"question":"¿Cuál de las siguientes es una ventaja de las redes?","options":["Compartir archivos e impresoras","Aumentar el tamaño físico del disco duro","Reducir la velocidad de acceso","Aumentar el consumo eléctrico"],"answer":"Compartir archivos e impresoras"},
             {"question":"¿Qué es un nodo en una red?","options":["Dispositivo conectado a la red","Tipo de cable","Software de oficina","Servidor de correo"],"answer":"Dispositivo conectado a la red"},
             {"question":"¿Qué tipo de señal utilizan las redes digitales?","options":["Discreta","Continua","Mecánica","Analógica"],"answer":"Discreta"},
             {"question":"¿Qué tipo de red cubre un área geográfica extensa?","options":["WAN","LAN","PAN","CAN"],"answer":"WAN"},
@@ -288,18 +316,38 @@
             {"question":"¿Qué protocolo se usa para acceder a páginas web?","options":["HTTP","FTP","SMTP","SSH"],"answer":"HTTP"},
             {"question":"¿Qué tipo de red se forma al conectar dispositivos inalámbricos en una zona específica?","options":["WLAN","LAN","MAN","WAN"],"answer":"WLAN"}
         ];
-
         const questions = [...simulacro, ...autoevaluativo];
         let currentQuestion = 0;
         const userAnswers = Array(questions.length).fill(null);
         const answerStates = Array(questions.length).fill(null); // null | true | false
         const quizDiv = document.getElementById("quiz");
         const resultDiv = document.getElementById("result");
+        // --- MARCADOR DE DIFICULTAD ---
+        // Guarda si cada pregunta te costó o no (true/false)
+        const userCost = Array(questions.length).fill(false);
+
+        // Almacena el orden aleatorio de opciones para cada pregunta
+        const shuffledOptions = Array(questions.length).fill(null);
+
+        // Mezcla un array (Fisher-Yates)
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
 
         function showQuestion(index) {
             const q = questions[index];
             let savedAnswer = userAnswers[index];
             let feedback = '';
+
+            if (!shuffledOptions[index]) {
+                shuffledOptions[index] = shuffleArray([...q.options]);
+            }
+            const optionsToShow = shuffledOptions[index];
+
             if (answerStates[index] !== null) {
                 if (answerStates[index]) {
                     feedback = `<div class="feedback correct">✔️ ¡Respuesta correcta!</div>`;
@@ -311,12 +359,16 @@
             quizDiv.innerHTML = `
                 <div class="question">
                     <p><strong>Pregunta ${index + 1} de ${questions.length}:</strong> ${q.question}</p>
-                    ${q.options.map(opt => `
+                    ${optionsToShow.map(opt => `
                         <label>
                             <input type="radio" name="q${index}" value="${opt}" 
                             ${savedAnswer === opt ? 'checked' : ''} 
                             onchange="saveAnswer(${index}, this.value)"> ${opt}
                         </label><br>`).join("")}
+                    <button class="cost-marker${userCost[index] ? ' selected' : ''}" onclick="toggleCost(${index})" type="button">
+                        ${userCost[index] ? '✔️ Marcada como pregunta que te costó' : 'Esta pregunta me cuesta'}
+                    </button>
+                    ${userCost[index] ? '<span class="cost-label">¡Recuerda repasar esta consigna!</span>' : ''}
                     ${feedback}
                 </div>
             `;
@@ -340,6 +392,10 @@
                 showQuestion(currentQuestion);
             }
         }
+        function toggleCost(index) {
+            userCost[index] = !userCost[index];
+            showQuestion(index);
+        }
         function submitQuiz() {
             let score = 0;
             let summary = "<h2>Resultados:</h2>";
@@ -359,6 +415,9 @@
                         summary += `✔️ Respuesta correcta: <span class="correct">${q.answer}</span>`;
                     }
                 }
+                if (userCost[i]) {
+                    summary += `<span class="cost-result">⚡ Marcaste que te costó esta pregunta</span>`;
+                }
                 summary += `</p>`;
             });
             const finalScore = (score / questions.length) * 100;
@@ -372,6 +431,7 @@
         window.nextQuestion = nextQuestion;
         window.previousQuestion = previousQuestion;
         window.submitQuiz = submitQuiz;
+        window.toggleCost = toggleCost;
         document.addEventListener("DOMContentLoaded", () => {
             showQuestion(currentQuestion);
         });
